@@ -107,13 +107,13 @@ __metadata:
   linkType: hard
 
 "@astrojs/mdx@npm:^3.0.0, @astrojs/mdx@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@astrojs/mdx@npm:3.0.1"
+  version: 3.1.1
+  resolution: "@astrojs/mdx@npm:3.1.1"
   dependencies:
     "@astrojs/markdown-remark": "npm:5.1.0"
     "@mdx-js/mdx": "npm:^3.0.1"
-    acorn: "npm:^8.11.3"
-    es-module-lexer: "npm:^1.5.2"
+    acorn: "npm:^8.12.0"
+    es-module-lexer: "npm:^1.5.3"
     estree-util-visit: "npm:^2.0.0"
     github-slugger: "npm:^2.0.0"
     gray-matter: "npm:^4.0.3"
@@ -127,7 +127,7 @@ __metadata:
     vfile: "npm:^6.0.1"
   peerDependencies:
     astro: ^4.8.0
-  checksum: 10c0/2641fe31439246ba93c401b84641320ac43dffaaf52d409d1f11123b513a2592cc8514e53046077774ff8c6fd626b7b5c42222defad7f0319ddd4bc9aea70c3f
+  checksum: 10c0/c977d566d21f29a5eb91a174dbeaada69f7c3b3fbc6da2c706adf984956bcd562794bef406e12073e505655daf669a08c2bba7f2b05a4dc6fce29661015f660a
   languageName: node
   linkType: hard
 
@@ -1751,6 +1751,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acorn@npm:^8.12.0":
+  version: 8.12.0
+  resolution: "acorn@npm:8.12.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 10c0/a19f9dead009d3b430fa3c253710b47778cdaace15b316de6de93a68c355507bc1072a9956372b6c990cbeeb167d4a929249d0faeb8ae4bb6911d68d53299549
+  languageName: node
+  linkType: hard
+
 "agent-base@npm:^7.0.2, agent-base@npm:^7.1.0, agent-base@npm:^7.1.1":
   version: 7.1.1
   resolution: "agent-base@npm:7.1.1"
@@ -2542,7 +2551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^1.5.2":
+"es-module-lexer@npm:^1.5.2, es-module-lexer@npm:^1.5.3":
   version: 1.5.3
   resolution: "es-module-lexer@npm:1.5.3"
   checksum: 10c0/0f50b655490d1048432eac6eec94d99d3933119666ae82be578c3db1ea4b2c594118a336f6b7a3c4e2815355dcc9a469d880acef1c45aa656a5aae8c8ae8e5f6
