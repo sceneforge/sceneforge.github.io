@@ -5650,7 +5650,7 @@ __metadata:
     "@astrojs/starlight": "npm:^0.23.1"
     astro: "npm:^4.8.6"
     sharp: "npm:^0.33.4"
-    starlight-image-zoom: "npm:^0.5.0"
+    starlight-image-zoom: "npm:^0.6.0"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.4.5"
   languageName: unknown
@@ -5894,16 +5894,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"starlight-image-zoom@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "starlight-image-zoom@npm:0.5.0"
+"starlight-image-zoom@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "starlight-image-zoom@npm:0.6.0"
   dependencies:
     rehype-raw: "npm:7.0.0"
     unist-util-visit: "npm:5.0.0"
     unist-util-visit-parents: "npm:6.0.1"
   peerDependencies:
     "@astrojs/starlight": ">=0.22.0"
-  checksum: 10c0/ab795770040e51bbe01abe4f17fb118d8f096ee22035fb333d06f84967ccc10913b80a7da79e4e1a78b0a19bd165fb95d570d76788989c46476cc1f78b949a01
+  checksum: 10c0/6617047fbc5e2456385b8b1f9b0d3991ad6c524e03bc0cd42fca19286701b4a44335547814a83d9f297c0a99c73d80f2fdfa68a98c69f23e756be3c5af00d836
   languageName: node
   linkType: hard
 
