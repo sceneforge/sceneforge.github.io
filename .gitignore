@@ -51,5 +51,6 @@ temp/
 # Compiled ViteJS config files
 vite.config.ts.*
 
-# Storybook Logs
+# Storybook
 *storybook.log
+storybook-static
