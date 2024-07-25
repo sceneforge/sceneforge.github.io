@@ -2,15 +2,14 @@ import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
 import starlightImageZoom from 'starlight-image-zoom';
 
-// https://astro.build/config
 export default defineConfig({
-  output: 'static',
+	output: 'static',
 	site: "https://sceneforge.org",
-  integrations: [
+	integrations: [
 		starlight({
 			plugins: [
-		    starlightImageZoom()
-	    ],
+				starlightImageZoom()
+			],
 			title: "Scene Forge",
 			description: "Unleash your creativity with our cutting-edge Progressive Web Application that empowers you to craft, visualise, and manipulate stunning 3D scenes.",
 			logo: {
@@ -19,12 +18,12 @@ export default defineConfig({
 				replacesTitle: true,
 			},
 			social: {
-				github: "https://github.com/sceneforge/sceneforge",
+				github: "https://github.com/sceneforge",
 			},
 			defaultLocale: 'root',
 			locales: {
-			  root: {
-				  label: 'English',
+				root: {
+					label: 'English',
 					lang: 'en',
 				},
 			},
