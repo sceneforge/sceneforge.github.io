@@ -7,5 +7,13 @@ banner:
     Scene Forge is still <strong>in development</strong>.
     Feel free to try it out and <a rel="external" href="https://github.com/sceneforge/sceneforge/discussions" target="_blank">provide feedback</a>.
 ---
+import { CardGrid } from '@astrojs/starlight/components';
+import { ContributorCard } from '@components';
 
-- <a rel="external" href="https://phinpho.github.io" target="_blank">Rodolfo Pereira</a> (GitHub <a rel="external" href="https://github.com/phinpho" target="_blank">**@phinpho**</a>)
+<CardGrid>
+  <ContributorCard
+    name="Rodolfo Pereira"
+    github="phinpho"
+    website="https://phinpho.github.io/"
+  />
+</CardGrid>

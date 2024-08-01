@@ -1,0 +1,30 @@
+---
+import Link from "./Link.astro";
+
+const { ...props } = Astro.props;
+---
+
+<style>
+  li.link-group-item {
+    margin: 0 !important;
+    padding: 0;
+
+    &:not(:first-child)::before {
+      content: "•";
+      margin-right: 0.25rem;
+      color: color-mix(in srgb, currentColor 50%, Canvas);
+    }
+
+    .link-group-item-link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+</style>
+
+<li class:list={["link-group-item"]}>
+  <Link {...props} class:list={["link-group-item-link"]}><slot /></Link>
+</li>

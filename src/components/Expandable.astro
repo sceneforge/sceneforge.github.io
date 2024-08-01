@@ -1,0 +1,15 @@
+---
+const { summary, extra } = Astro.props;
+---
+
+<style>
+  details > summary > small.extra {
+    font-style: italic;
+  }
+</style>
+<details>
+  <summary
+    >{summary} {extra && <small class:list={["extra"]}>{extra}</small>}</summary
+  >
+  <slot />
+</details>

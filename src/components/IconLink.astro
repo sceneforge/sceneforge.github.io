@@ -1,0 +1,27 @@
+---
+import Link from "./Link.astro";
+import { Icon } from "@astrojs/starlight/components";
+
+const { name, ...props } = Astro.props;
+---
+
+<style>
+  a.icon-link {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+</style>
+
+<Link {...props} class:list={["icon-link"]}>
+  {name && <Icon name={name} />}
+  <span>
+    <slot />
+  </span>
+</Link>

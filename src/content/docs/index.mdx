@@ -9,7 +9,7 @@ banner:
 hero:
   tagline: Unleash your creativity  with our cutting-edge <strong>Progressive Web App</strong> that empowers you to <strong>craft</strong>, <strong>visualise</strong>, and <strong>manipulate</strong> stunning 3D scenes.
   image:
-    file: ../../assets/site-3D-logo-transparent.png
+    file: '@assets/site-3D-logo-transparent.png'
   actions:
     - text: Launch Application
       link: https://app.sceneforge.org/
@@ -25,6 +25,7 @@ hero:
         target: "_blank"
 ---
 import { Card, CardGrid, Icon, LinkCard } from '@astrojs/starlight/components';
+import { Link, Unlisted, UnlistedItem, IconLink, Expandable } from '@components';
 
 <CardGrid>
   <Card title="Open Source" icon="document">
@@ -35,44 +36,19 @@ import { Card, CardGrid, Icon, LinkCard } from '@astrojs/starlight/components';
   </Card>
 </CardGrid>
 <Card title="Highlights" icon="star">
-  <ul
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "start",
-      flexWrap: "wrap",
-      gap: "0.5rem",
-      listStyle: "none",
-      padding: 0,
-      margin: 0,
-    }}
-  >
-    <li style={{ flex: 1 }}>
-      <a
-        rel="external"
-        href="https://docs.sceneforge.org"
-        target="_blank"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyItems: "start",
-          gap: "0.5rem",
-          fontSize: "1.5rem",
-          textDecoration: "none",
-        }}
-      >
-        <Icon name="open-book" />
-        <span>Development Documentation</span>
-      </a>
+  <Unlisted gap="0">
+    <UnlistedItem>
+      <IconLink name="open-book" href="https://docs.sceneforge.org/">
+        Development Documentation
+      </IconLink>
       UI components, API, and other development details.
-    </li>
-  </ul>
+    </UnlistedItem>
+  </Unlisted>
 </Card>
 
 ----------
 
-<details>
-  <summary>Staging Environment <small>*Latest build*</small></summary>
+<Expandable summary="Staging Environment" extra="Latest build">
   If you want to see the latest changes before they are available in the production environment,
-  you can access the **Staging Scene Forge application** at <a rel="external" href="https://staging.sceneforge.org" target="_blank">staging.sceneforge.org</a>.
-</details>
+  you can access the **Staging Scene Forge application** at <Link href="https://staging.sceneforge.org">staging.sceneforge.org</Link>.
+</Expandable>

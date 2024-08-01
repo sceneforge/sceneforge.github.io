@@ -1,0 +1,12 @@
+---
+const { href, ...props } = Astro.props;
+
+const isExternal = !href.startsWith("/");
+---
+
+<a
+  rel={isExternal ? "external" : undefined}
+  href={href}
+  target={isExternal ? "_blank" : undefined}
+  {...props}><slot /></a
+>

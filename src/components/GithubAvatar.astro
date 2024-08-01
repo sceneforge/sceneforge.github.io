@@ -1,0 +1,52 @@
+---
+import Link from "./Link.astro";
+
+const { name, github } = Astro.props;
+
+const githubLink = `https://github.com/${github}`;
+const githubAvatar = `https://avatars.githubusercontent.com/${github}`;
+---
+
+<style>
+  a.github-avatar {
+    border-style: solid;
+    border-width: 0.0625rem;
+    border-color: color-mix(in srgb, currentColor 35%, Canvas);
+    padding: calc(0.0625rem * 3);
+    border-radius: 100vw;
+    background-color: Canvas;
+    place-content: center;
+    aspect-ratio: 1;
+
+    img.github-avatar-img {
+      aspect-ratio: 1;
+      border-radius: 100vw;
+      object-fit: cover;
+      filter: brightness(0.85);
+      transition:
+        box-shadow 0.2s,
+        scale 0.2s,
+        filter 0.2s;
+    }
+
+    &:hover > img.github-avatar-img {
+      filter: brightness(1);
+      scale: 1.25;
+      box-shadow: 0 0.125rem 0.125rem 0
+        color-mix(in srgb, black 25%, transparent);
+    }
+  }
+</style>
+
+<Link
+  alt={`${name}'s GitHub avatar`}
+  class:list={["github-avatar"]}
+  href={githubLink}
+  title=`${name}'s GitHub Profile`
+>
+  <img
+    alt={`${github}'s avatar from GitHub`}
+    class:list={["github-avatar-img"]}
+    src={githubAvatar}
+  />
+</Link>

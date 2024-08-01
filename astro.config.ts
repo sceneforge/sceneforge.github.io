@@ -13,8 +13,8 @@ export default defineConfig({
 			title: "Scene Forge",
 			description: "Unleash your creativity with our cutting-edge Progressive Web Application that empowers you to craft, visualise, and manipulate stunning 3D scenes.",
 			logo: {
-				light: "./src/assets/site-header-logo-light.svg",
-				dark: "./src/assets/site-header-logo-dark.svg",
+				light: "@assets/site-header-logo-light.svg",
+				dark: "@assets/site-header-logo-dark.svg",
 				replacesTitle: true,
 			},
 			social: {
@@ -42,4 +42,12 @@ export default defineConfig({
 			],
 		}),
 	],
+	prefetch: {
+		prefetchAll: true,
+	},
+	vite: {
+		css: {
+			transformer: "lightningcss",
+		},
+	},
 });
