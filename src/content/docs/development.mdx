@@ -7,56 +7,64 @@ banner:
     Scene Forge is still <strong>in development</strong>.
     Feel free to try it out and <a rel="external" href="https://github.com/sceneforge/sceneforge/discussions" target="_blank">provide feedback</a>.
 ---
+import { LinkCard } from '@astrojs/starlight/components';
+import { Expandable, Link } from '@components';
 
-import { Link } from '@components';
+The project is fully Open Source and organised with some repositories under the <Link href="https://github.com/sceneforge">Scene Forge's GitHub profile</Link>.
 
-The project is fully Open Source and organised with some repositories on <Link href="https://github.com/sceneforge">GitHub</Link>.
+<LinkCard
+  title="Development Documentation"
+  href="https://docs.sceneforge.org"
+  description="UI components, API, and other development details"
+  target="_blank"
+/>
 
-## Organisation Profile
+## Deployment Environments
 
-- <Link href="https://github.com/sceneforge">**Scene Forge**</Link>
+| Environment | Link                                                                      |
+| ----------- | ------------------------------------------------------------------------- |
+| Production  | <Link href="https://app.sceneforge.org">app.sceneforge.org</Link>         |
+| Staging     | <Link href="https://staging.sceneforge.org">staging.sceneforge.org</Link> |
 
-## Documentation
+## Repositories
 
-- <Link href="https://docs.sceneforge.org/"><strong>Development Documentation</strong></Link>
-  UI components, API, and other development details.
+| Repository                                                                                             | Description                                                |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| <Link href="https://github.com/sceneforge/sceneforge">sceneforge/sceneforge</Link>                     | Monorepo for the Scene Forge Application and Documentation |
+| <Link href="https://github.com/sceneforge/app">sceneforge/app</Link>                                   | Application Publisher                                      |
+| <Link href="https://github.com/sceneforge/docs">sceneforge/docs</Link>                                 | Development Documents Publisher                            |
+| <Link href="https://github.com/sceneforge/sceneforge.github.io">sceneforge/sceneforge.github.io</Link> | Common GitHub Organisation profile website                 |
+| <Link href="https://github.com/sceneforge/.github">sceneforge/.github</Link>                           | Common GitHub Organisation profile settings                |
 
-## Application Deployment Environments
+## Continuous Integration <small>(GitHub Actions)</small>
 
-- **Production**: <Link href="https://app.sceneforge.org">app.sceneforge.org</Link>
-  *(in development)*
-- **Staging**: <Link href="https://staging.sceneforge.org">staging.sceneforge.org</Link>
+<Expandable summary="sceneforge/sceneforge">
+| Workflow                                                                                                               | Description                                              |
+| ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| <Link href="https://github.com/sceneforge/sceneforge/blob/main/.github/workflows/staging.yml">staging.yml</Link>       | Publish the application for the Staging Environment      |
+| <Link href="https://github.com/sceneforge/sceneforge/blob/main/.github/workflows/production.yml">production.yml</Link> | Create a production release attaching the built contents |
+</Expandable>
 
-## Public Repositories
+<Expandable summary="sceneforge/app">
+| Workflow                                                                                                  | Description                                                           |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <Link href="https://github.com/sceneforge/app/blob/main/.github/workflows/publish.yml">publish.yml</Link> | Publish the latest release application for the production environment |
+</Expandable>
 
-- <Link href="https://github.com/sceneforge/sceneforge">Monorepo</Link>
-  - Applications
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/apps/sceneforge">Scene Forge</Link>
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/apps/docs">Development Documents</Link>
-  - Packages
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/packages/core">Core (`@sceneforge/core`)</Link>
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/packages/data">Data (`@sceneforge/data`)</Link>
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/packages/scene">Scene (`@sceneforge/scene`)</Link>
-    - <Link href="https://github.com/sceneforge/sceneforge/tree/main/packages/ui">UI (`@sceneforge/ui`)</Link>
+<Expandable summary="sceneforge/docs">
+| Workflow                                                                                                   | Description                                                             |
+| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| <Link href="https://github.com/sceneforge/docs/blob/main/.github/workflows/publish.yml">publish.yml</Link> | Publish the latest release documentation for the production environment |
+</Expandable>
 
-- <Link href="https://github.com/sceneforge/app">Application Publisher</Link>
-- <Link href="https://github.com/sceneforge/docs">Development Documents Publisher</Link>
-- <Link href="https://github.com/sceneforge/sceneforge.github.io">Main Website</Link>
-- <Link href="https://github.com/sceneforge/.github">Organisation settings</Link>
+## Guidelines
 
-## Continuous Integration (GitHub Actions)
-
-- <Link href="https://github.com/sceneforge/sceneforge/blob/main/.github/workflows/build.yml">Artifacts building</Link>
-- <Link href="https://github.com/sceneforge/app/blob/main/.github/workflows/publish.yml">Production Application publishing</Link>
-- <Link href="https://github.com/sceneforge/sceneforge/blob/main/.github/workflows/deploy.yml">Staging Application publishing</Link>
-- <Link href="https://github.com/sceneforge/docs/blob/main/.github/workflows/publish.yml">Documentation publishing</Link>
-- <Link href="https://github.com/sceneforge/sceneforge.github.io/blob/main/.github/workflows/deploy.yml">Main website publishing</Link>
-
-## Contributing Guidelines
-
-- <Link href="https://github.com/sceneforge/sceneforge/blob/main/CONTRIBUTING.md"><tt>~/sceneforge/**CONTRIBUTING.md**</tt></Link>
-- <Link href="https://github.com/sceneforge/sceneforge/blob/main/CODE_OF_CONDUCT.md"><tt>~/sceneforge/**CODE_OF_CONDUCT.md**</tt></Link>
+| Document                                                                                                     | Description                                                |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| <Link href="https://github.com/sceneforge/sceneforge/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</Link>       | Guidelines for contributing to the project                 |
+| <Link href="https://github.com/sceneforge/sceneforge/blob/main/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</Link> | Code of Conduct for the project                            |
 
 ## License
 
-- <Link href="https://github.com/sceneforge/sceneforge/blob/main/LICENSE">Creative Commons Zero v1.0 Universal</Link>
+<Link href="https://github.com/sceneforge/sceneforge/blob/main/LICENSE">Creative Commons Zero v1.0 Universal</Link>
+
